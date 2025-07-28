@@ -4,12 +4,49 @@ This document preserves the original development prompt and the iterative proces
 
 ## 🎯 Original Development Prompt
 
-The project began with a request to create a comprehensive SEO meta tag analysis tool with the following requirements:
+The project began with a comprehensive request to build a web application called **MetaSnap** that analyzes SEO meta tags for any public webpage and returns:
 
 ### Initial Request
-> "Create a unit tests"
+> "Build a web app called **MetaSnap** that analyzes SEO meta tags for any public webpage and returns:
+> - Parsed meta tags from the site (title, description, canonical, Open Graph, Twitter cards)
+> - A total SEO score out of 100 based on tag presence and best practice rules
+> - Visual previews of how the page looks on Google Search, Twitter, and Facebook
+> - Feedback/suggestions on how to improve each tag
+> 
+> MVP Requirements:
+> 1. Frontend (React + Tailwind CSS):
+>    - Input field for the user to enter a URL
+>    - "Analyze" button
+>    - Section to display extracted meta tags (title, description, OG, Twitter)
+>    - Section to show visual previews
+>    - SEO score (out of 100) with breakdown by category
+>    - Color-coded feedback (green = good, yellow = warning, red = missing)
+> 
+> 2. Backend (Node.js + Express or Python Flask):
+>    - API to accept a URL, fetch its HTML, and parse the `<head>` content
+>    - Return relevant tags as JSON
+>    - Calculate SEO score based on:
+>      - Title & Description (30 pts)
+>      - Open Graph Tags (25 pts)
+>      - Twitter Card Tags (20 pts)
+>      - Canonical & Robots Tags (15 pts)
+>      - Optional Structured Data (10 pts)
+> 
+> 3. Use Cheerio (Node) or BeautifulSoup (Python) to parse HTML and extract metadata
+> 
+> 4. Handle edge cases:
+>    - Redirects
+>    - Invalid or non-HTML URLs
+>    - Missing head section
+> 
+> Extras (optional if time permits):
+> - Allow exporting the SEO report as PDF
+> - Add dark mode UI
+> - Support mobile responsiveness
+> 
+> Name the main React component `MetaAnalyzer`. Use modular components for PreviewCard, ScoreDisplay, and TagList."
 
-This simple request evolved into a comprehensive full-stack application development process.
+This comprehensive request provided a clear roadmap for building a full-stack SEO analysis application.
 
 ## 📋 Development Evolution
 
